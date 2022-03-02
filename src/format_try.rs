@@ -1,13 +1,14 @@
 // use ansi_term::Colour::{Green, Yellow, Red};
 // use std::io;
-use std::io::stdout;
 use crossterm::{
     execute,
-    style::{Color, Print, SetBackgroundColor, SetForegroundColor, ResetColor, Attribute, SetAttribute}
+    style::{
+        Attribute, Color, Print, ResetColor, SetAttribute, SetBackgroundColor, SetForegroundColor,
+    },
 };
+use std::io::{stdout, Error};
 
-pub fn format_tried_word(trial: &str, answer: &str) { 
-
+pub fn format_tried_word(trial: &str, answer: &str) -> Result<(), Error> {
     let answer_vec: Vec<char> = answer.chars().collect();
 
     for (i, j) in trial.chars().enumerate() {
@@ -21,7 +22,7 @@ pub fn format_tried_word(trial: &str, answer: &str) {
                 SetAttribute(Attribute::Bold),
                 Print(formatted_char),
                 ResetColor
-            );
+            )?;
         } else if answer_vec.contains(&j) {
             // print!("{}\t", Yellow.paint(j.to_string()));
             execute!(
@@ -31,7 +32,7 @@ pub fn format_tried_word(trial: &str, answer: &str) {
                 SetAttribute(Attribute::Bold),
                 Print(formatted_char),
                 ResetColor
-            );
+            )?;
         } else {
             // print!("{}\t", Red.paint(j.to_string()));
             execute!(
@@ -41,10 +42,12 @@ pub fn format_tried_word(trial: &str, answer: &str) {
                 SetAttribute(Attribute::Bold),
                 Print(formatted_char),
                 ResetColor
-            );
+            )?;
         }
         // io::stdout().flush().unwrap();
     }
 
-    println!("");
+    println!();
+
+    Ok(())
 }
