@@ -41,20 +41,19 @@ fn main() {
             println!("ERROR: Not a valid try!");
         } else {
             format_try::format_tried_word(&trial.as_str(), chosen_word);
-            
-            if num_tries == 6 {
-                println!("Your 6 tries are over!");
-                // The correct word was {}", chosen_word
-                if trial == chosen_word {
-                    println!("Congratulations! You won in {} tries", num_tries + 1);
-                    break;
-                } else {
-                    println!("You lost. Try again!");
-                }
-                break;
-            } 
 
-            num_tries += 1;
+            if num_tries == 5 && trial != chosen_word {
+                println!("Your 6 tries are over! The correct word was {}", chosen_word);
+                break;
+            } else if num_tries == 5 && trial == chosen_word {
+                println!("Congratulations! You won in 6 tries");
+                break;
+            } else if trial == chosen_word {
+                println!("Congratulations! You won in {} tries", num_tries + 1);
+                break;
+            } else {
+                num_tries += 1;
+            }
         }
 
         trial = input_word();
