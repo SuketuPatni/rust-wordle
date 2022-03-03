@@ -1,0 +1,1 @@
+clear && cargo run -q && sleep 3
