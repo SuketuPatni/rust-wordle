@@ -1,1 +1,0 @@
-web: ttyd $(cat .ttyd_env)

@@ -2,8 +2,8 @@
 -t cursorStyle=bar 
 -t lineHeight=1.5 
 -t disableLeaveAlert=true 
--t disableResizeOverlay=true 
--t disableReconnect=true 
+-t disableResizeOverlay=true
+-t disableReconnect=true
 -t titleFixed=rust-wordle 
 -t fontSize=28 
 bash start.sh
