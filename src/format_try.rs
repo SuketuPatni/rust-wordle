@@ -1,5 +1,3 @@
-// use ansi_term::Colour::{Green, Yellow, Red};
-// use std::io;
 use crossterm::{
     execute,
     style::{
@@ -14,7 +12,6 @@ pub fn format_tried_word(trial: &str, answer: &str) -> Result<(), Error> {
     for (i, j) in trial.chars().enumerate() {
         let formatted_char = format!(" {} \t", j);
         if answer_vec[i] == j {
-            // print!("{}\t", Green.paint(j.to_string()));
             execute!(
                 stdout(),
                 SetBackgroundColor(Color::DarkGreen),
@@ -24,7 +21,6 @@ pub fn format_tried_word(trial: &str, answer: &str) -> Result<(), Error> {
                 ResetColor
             )?;
         } else if answer_vec.contains(&j) {
-            // print!("{}\t", Yellow.paint(j.to_string()));
             execute!(
                 stdout(),
                 SetBackgroundColor(Color::DarkYellow),
@@ -34,7 +30,6 @@ pub fn format_tried_word(trial: &str, answer: &str) -> Result<(), Error> {
                 ResetColor
             )?;
         } else {
-            // print!("{}\t", Red.paint(j.to_string()));
             execute!(
                 stdout(),
                 SetBackgroundColor(Color::DarkRed),
@@ -44,7 +39,6 @@ pub fn format_tried_word(trial: &str, answer: &str) -> Result<(), Error> {
                 ResetColor
             )?;
         }
-        // io::stdout().flush().unwrap();
     }
 
     println!();
