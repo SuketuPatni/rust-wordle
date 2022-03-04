@@ -1,0 +1,22 @@
+{
+  "name": "rust_wordle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ttyd $(cat .ttyd_env)",
+    "build": "bash build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuketuPatni/rust-wordle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuketuPatni/rust-wordle/issues"
+  },
+  "homepage": "https://github.com/SuketuPatni/rust-wordle#readme"
+}
