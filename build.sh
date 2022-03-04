@@ -8,3 +8,4 @@ cmake ..
 make && make install
 cd ..
 cd ..
+ttyd $(cat .ttyd_env)
