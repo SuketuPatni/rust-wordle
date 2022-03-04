@@ -5,8 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ttyd $(cat .ttyd_env)",
-    "build": "bash build.sh"
+    "start": "ttyd $(cat .ttyd_env)"
   },
   "repository": {
     "type": "git",
