@@ -1,0 +1,1 @@
+/usr/bin/cc  -D_GNU_SOURCE  -rdynamic CMakeFiles/ttyd.dir/src/utils.c.o CMakeFiles/ttyd.dir/src/pty.c.o CMakeFiles/ttyd.dir/src/protocol.c.o CMakeFiles/ttyd.dir/src/http.c.o CMakeFiles/ttyd.dir/src/server.c.o  -o ttyd  -lz /usr/lib/x86_64-linux-gnu/libwebsockets.a /usr/lib/x86_64-linux-gnu/libwebsockets.so.15 -ljson-c -luv -lssl -lcrypto -lutil -lev -luv -lm -lcap 

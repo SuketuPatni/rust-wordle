@@ -1,0 +1,7 @@
+/home/exosphere/Desktop/rust_projects/rust_wordle/ttyd_tools/build/CMakeFiles/install/strip.dir
+/home/exosphere/Desktop/rust_projects/rust_wordle/ttyd_tools/build/CMakeFiles/install/local.dir
+/home/exosphere/Desktop/rust_projects/rust_wordle/ttyd_tools/build/CMakeFiles/install.dir
+/home/exosphere/Desktop/rust_projects/rust_wordle/ttyd_tools/build/CMakeFiles/list_install_components.dir
+/home/exosphere/Desktop/rust_projects/rust_wordle/ttyd_tools/build/CMakeFiles/rebuild_cache.dir
+/home/exosphere/Desktop/rust_projects/rust_wordle/ttyd_tools/build/CMakeFiles/edit_cache.dir
+/home/exosphere/Desktop/rust_projects/rust_wordle/ttyd_tools/build/CMakeFiles/ttyd.dir
